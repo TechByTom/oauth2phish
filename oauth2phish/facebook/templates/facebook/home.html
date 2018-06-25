@@ -1,0 +1,58 @@
+{% extends "facebook/layout.html" %}
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<div class="jumbotron">
+  <h1 align="center">Home</h1>
+  <p align="center">Chose network</p>
+
+  <table align="center" border="1" width="60%">
+    <thead style=" align:'center'; ">
+    <col width="33%">
+    <col width="33%">
+    <col width="33%">
+    <tr>
+      <td align="center" >
+          <input style="width:100%" type="button" value="Office">
+      </td>
+      <td align="center">
+          <input style="width:100%" type="button" value="Facebook">
+      </td>
+      <td align="center">
+          <input style="width:100%" type="button" value="Google">
+      </td>
+    </tr>
+    </thead>
+  </table>
+  <br/>
+  <table border=1 align="center" width="90%">
+    <thead>
+    <col width="55%">
+    <col width="45%">
+      <tr>
+        <td align="center">
+          <p>Username</p>
+        </td>
+        <td align="center">
+          <p>email</p>
+        </td>
+      </tr>
+    </thead>
+
+      <tbody>
+        {% for entr in accs %}
+            <tr>
+              <td>
+                <p>{{entr.1}}</p>
+              </td>
+              <td>
+                <p>{{entr.2}}</p>
+              </td>
+            </tr>
+        {% endfor %}
+      </tbody>
+
+  </table>
+
+
+</div>
+{% endblock %}
